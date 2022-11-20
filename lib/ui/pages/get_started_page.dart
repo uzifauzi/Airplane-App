@@ -55,7 +55,7 @@ class GetStartedPage extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: kPrimaryColor,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(17.0),
+                          borderRadius: BorderRadius.circular(defaultRadius),
                         ),
                       ),
                       onPressed: () {},

@@ -13,7 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: GetStartedPage(),
+      routes: {
+        '/': (context) => SplashPage(),
+        '/get-started': (context) => GetStartedPage(),
+      },
     );
   }
 }
