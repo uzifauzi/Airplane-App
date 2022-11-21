@@ -1,6 +1,4 @@
 import 'package:airplane_app/shared/theme.dart';
-import 'package:airplane_app/shared/theme.dart';
-import 'package:airplane_app/shared/theme.dart';
 import 'package:flutter/material.dart';
 
 import '../../shared/theme.dart';
@@ -58,7 +56,9 @@ class GetStartedPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(defaultRadius),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/sign-up');
+                      },
                       child: Text(
                         'Get Started',
                         style: whiteTextStyle.copyWith(
