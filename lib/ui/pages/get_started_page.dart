@@ -1,8 +1,6 @@
 import 'package:airplane_app/shared/theme.dart';
 import 'package:flutter/material.dart';
 
-import '../../shared/theme.dart';
-
 class GetStartedPage extends StatelessWidget {
   const GetStartedPage({super.key});
 
