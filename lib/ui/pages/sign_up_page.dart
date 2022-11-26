@@ -1,4 +1,5 @@
 import 'package:airplane_app/ui/widgets/custom_button.dart';
+import 'package:airplane_app/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 import '../../shared/theme.dart';
@@ -70,19 +71,20 @@ class InputSection extends StatelessWidget {
       ),
       child: Column(
         children: [
-          InputForm(
-            label: 'Full name',
+          CustomTextFormField(
+            label: 'Full Name',
             hintText: 'Your full name',
           ),
-          EmailForm(
-            label: 'Email name',
-            hintText: 'Your email name',
+          CustomTextFormField(
+            label: 'Email Name',
+            hintText: 'Your email',
+            textInputType: TextInputType.emailAddress,
           ),
-          PasswordForm(
+          CustomTextFormField(
             label: 'Password',
             hintText: 'Your password',
           ),
-          InputForm(
+          CustomTextFormField(
             label: 'Hobby',
             hintText: 'Your hobby',
           ),
@@ -95,152 +97,6 @@ class InputSection extends StatelessWidget {
                   '/bonus',
                 );
               })
-        ],
-      ),
-    );
-  }
-}
-
-class InputForm extends StatelessWidget {
-  final String label;
-  final String hintText;
-
-  const InputForm({
-    Key? key,
-    required this.label,
-    required this.hintText,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(
-        bottom: 20,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            label,
-          ),
-          SizedBox(
-            height: 6,
-          ),
-          TextFormField(
-            cursorColor: kBlackColor,
-            decoration: InputDecoration(
-                hintText: hintText,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(
-                    defaultRadius,
-                  ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(
-                      defaultRadius,
-                    ),
-                    borderSide: BorderSide(
-                      color: kPrimaryColor,
-                    ))),
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class EmailForm extends StatelessWidget {
-  final String label;
-  final String hintText;
-
-  const EmailForm({
-    Key? key,
-    required this.label,
-    required this.hintText,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(
-        bottom: 20,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            label,
-          ),
-          SizedBox(
-            height: 6,
-          ),
-          TextFormField(
-            keyboardType: TextInputType.emailAddress,
-            cursorColor: kBlackColor,
-            decoration: InputDecoration(
-                hintText: hintText,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(
-                    defaultRadius,
-                  ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(
-                      defaultRadius,
-                    ),
-                    borderSide: BorderSide(
-                      color: kPrimaryColor,
-                    ))),
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class PasswordForm extends StatelessWidget {
-  final String label;
-  final String hintText;
-
-  const PasswordForm({
-    Key? key,
-    required this.label,
-    required this.hintText,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(
-        bottom: 20,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            label,
-          ),
-          SizedBox(
-            height: 6,
-          ),
-          TextFormField(
-            obscureText: true,
-            cursorColor: kBlackColor,
-            decoration: InputDecoration(
-                hintText: hintText,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(
-                    defaultRadius,
-                  ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(
-                      defaultRadius,
-                    ),
-                    borderSide: BorderSide(
-                      color: kPrimaryColor,
-                    ))),
-          )
         ],
       ),
     );
