@@ -1,3 +1,4 @@
+import 'package:airplane_app/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../shared/theme.dart';
@@ -85,28 +86,15 @@ class InputSection extends StatelessWidget {
             label: 'Hobby',
             hintText: 'Your hobby',
           ),
-          SizedBox(
-            width: double.infinity,
-            height: 55.0,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: kPrimaryColor,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(defaultRadius),
-                ),
-              ),
+          CustomButton(
+              title: 'Get Started',
+              width: 220,
               onPressed: () {
-                Navigator.pushNamed(context, '/bonus');
-              },
-              child: Text(
-                'Get Started',
-                style: whiteTextStyle.copyWith(
-                  fontSize: 18,
-                  fontWeight: medium,
-                ),
-              ),
-            ),
-          )
+                Navigator.pushNamed(
+                  context,
+                  '/bonus',
+                );
+              })
         ],
       ),
     );

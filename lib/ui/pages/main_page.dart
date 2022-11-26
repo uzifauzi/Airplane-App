@@ -1,3 +1,4 @@
+import 'package:airplane_app/ui/widgets/custom_navigation_item.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 
@@ -40,61 +41,21 @@ Widget CustomBottomNavigation() {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          IconButton(
+          CustomNavigationItem(
             icon: 'assets/icon_home.png',
-            color: kPrimaryColor,
+            isSelected: true,
           ),
-          IconButton(
+          CustomNavigationItem(
             icon: 'assets/icon_transaction.png',
-            color: transparentColor,
           ),
-          IconButton(
+          CustomNavigationItem(
             icon: 'assets/icon_card.png',
-            color: transparentColor,
           ),
-          IconButton(
+          CustomNavigationItem(
             icon: 'assets/icon_setting.png',
-            color: transparentColor,
           ),
         ],
       ),
     ),
   );
-}
-
-class IconButton extends StatelessWidget {
-  final String icon;
-  final Color color;
-  const IconButton({
-    Key? key,
-    required this.icon,
-    required this.color,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        Container(
-          height: 24.0,
-          width: 24.0,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-            image: AssetImage(icon),
-          )),
-        ),
-        Container(
-          width: 30,
-          height: 2,
-          decoration: BoxDecoration(
-            color: color,
-            borderRadius: BorderRadius.circular(
-              18.0,
-            ),
-          ),
-        )
-      ],
-    );
-  }
 }
