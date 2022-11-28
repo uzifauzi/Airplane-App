@@ -84,6 +84,9 @@ class HomePage extends StatelessWidget {
                   Container(
                     width: 180,
                     height: 220,
+                    margin: EdgeInsets.only(
+                      bottom: 20,
+                    ),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(
                           18,
@@ -103,12 +106,44 @@ class HomePage extends StatelessWidget {
                             bottomLeft: Radius.circular(18),
                           ),
                         ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              width: 20,
+                              height: 20,
+                              margin: EdgeInsets.only(
+                                right: 2,
+                              ),
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                  'assets/star.png',
+                                )),
+                              ),
+                            ),
+                            Text(
+                              '4.8',
+                              style: blackTextStyle.copyWith(
+                                fontWeight: medium,
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                  )
+                  ),
+                  Text(
+                    'Singapore',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 18,
+                      fontWeight: medium,
+                    ),
+                  ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       );
