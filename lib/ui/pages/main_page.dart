@@ -1,3 +1,4 @@
+import 'package:airplane_app/ui/pages/home_page.dart';
 import 'package:airplane_app/ui/widgets/custom_navigation_item.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
@@ -12,12 +13,17 @@ class MainPage extends StatelessWidget {
         backgroundColor: kBackgroundColor,
         body: Stack(
           children: [
+            BuildContent(),
             CustomBottomNavigation(),
           ],
         ),
       ),
     );
   }
+}
+
+Widget BuildContent() {
+  return HomePage();
 }
 
 //bottom navigation bar
