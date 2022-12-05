@@ -5,7 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 class AuthService {
   FirebaseAuth _auth = FirebaseAuth.instance;
 
-// fungsi sign up
+// fungsi sign up, nilainya berupa usermodel
   Future<UserModel> signUp({
     required String email,
     required String password,
