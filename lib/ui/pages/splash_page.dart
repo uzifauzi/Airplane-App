@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:airplane_app/shared/theme.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatefulWidget {
@@ -15,7 +16,17 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     // TODO: implement initState
     Timer(Duration(seconds: 3), () {
-      Navigator.pushNamed(context, '/get-started');
+      // ambil data user yg sekarang
+      User? user = FirebaseAuth.instance.currentUser;
+
+       // lakukan pengkondisian apakah Firebase memiliki user aktif
+      if (user == null) {
+        Navigator.pushNamedAndRemoveUntil(
+            context, '/get-started', (route) => false);
+      } else {
+        print(user.email);
+        Navigator.pushNamedAndRemoveUntil(context, '/main', (route) => false);
+      }
     });
     super.initState();
   }

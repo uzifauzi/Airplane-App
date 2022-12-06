@@ -1,3 +1,4 @@
+import 'package:airplane_app/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class SettingPage extends StatelessWidget {
@@ -6,7 +7,10 @@ class SettingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text('Settings Page'),
-    );
+        child: CustomButton(
+      title: 'Sign Out',
+      width: 220,
+      onPressed: () {},
+    ));
   }
 }

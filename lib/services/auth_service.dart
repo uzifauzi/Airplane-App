@@ -1,3 +1,4 @@
+import 'package:airplane_app/cubit/auth_cubit.dart';
 import 'package:airplane_app/models/user_model.dart';
 import 'package:airplane_app/services/user_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -30,6 +31,16 @@ class AuthService {
       // set user
       await UserService().setUSer(user);
       return user;
+    } catch (e) {
+      throw e;
+    }
+  }
+
+  // fungsi untuk log out akun
+  Future<void> signOut() async {
+    try {
+      // panggil fungsi sign out dari firebase
+      await _auth.signOut();
     } catch (e) {
       throw e;
     }
