@@ -18,4 +18,21 @@ class UserService {
       throw e;
     }
   }
+
+  // method untuk mengambil data user berdasarkan id
+  Future<UserModel> getUserById(String id) async {
+    try {
+      // variable snapshot mengambil seluruh data dari database
+      DocumentSnapshot snapshot = await _userReference.doc(id).get();
+      return UserModel(
+        id: id,
+        email: snapshot['email'],
+        name: snapshot['name'],
+        hobby: snapshot['hobby'],
+        balance: snapshot['balance'],
+      );
+    } catch (e) {
+      throw e;
+    }
+  }
 }
