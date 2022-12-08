@@ -46,6 +46,7 @@ class AuthCubit extends Cubit<AuthState> {
 
   void getCurrentUser(String id) async {
     try {
+      // variable user berisi data user yang diambil melalui fungsi getuserbyid
       UserModel user = await UserService().getUserById(id);
       emit(AuthSuccess(user));
     } catch (e) {

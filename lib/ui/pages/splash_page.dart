@@ -1,8 +1,10 @@
 import 'dart:async';
 
+import 'package:airplane_app/cubit/auth_cubit.dart';
 import 'package:airplane_app/shared/theme.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -19,12 +21,14 @@ class _SplashPageState extends State<SplashPage> {
       // ambil data user yg sekarang
       User? user = FirebaseAuth.instance.currentUser;
 
-       // lakukan pengkondisian apakah Firebase memiliki user aktif
+      // lakukan pengkondisian apakah Firebase memiliki user aktif
       if (user == null) {
         Navigator.pushNamedAndRemoveUntil(
             context, '/get-started', (route) => false);
       } else {
         print(user.email);
+        // panggil fungsi current user di halaman awal, sehingga data mengikuti route yang ada
+        context.read<AuthCubit>().getCurrentUser(user.uid);
         Navigator.pushNamedAndRemoveUntil(context, '/main', (route) => false);
       }
     });
