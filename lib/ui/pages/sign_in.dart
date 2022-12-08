@@ -6,14 +6,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../shared/theme.dart';
 
-class SignUpPage extends StatelessWidget {
-  SignUpPage({super.key});
+class SignInPage extends StatelessWidget {
+  SignInPage({super.key});
 
-  final TextEditingController nameController = TextEditingController(text: '');
   final TextEditingController emailController = TextEditingController(text: '');
   final TextEditingController passwordController =
       TextEditingController(text: '');
-  final TextEditingController hobbyController = TextEditingController(text: '');
 
   Widget title() {
     return Container(
@@ -21,7 +19,7 @@ class SignUpPage extends StatelessWidget {
         top: 50.0,
       ),
       child: Text(
-        'Join us and get\nyour next journey',
+        'Sign in with ur \nexisting account',
         style: purpleTextStyle.copyWith(fontSize: 24, fontWeight: semiBold),
       ),
     );
@@ -43,11 +41,6 @@ class SignUpPage extends StatelessWidget {
       child: Column(
         children: [
           CustomTextFormField(
-            controller: nameController,
-            label: 'Full Name',
-            hintText: 'Your full name',
-          ),
-          CustomTextFormField(
             controller: emailController,
             label: 'Email Name',
             hintText: 'Your email',
@@ -59,11 +52,6 @@ class SignUpPage extends StatelessWidget {
             label: 'Password',
             hintText: 'Your password',
           ),
-          CustomTextFormField(
-            controller: hobbyController,
-            label: 'Hobby',
-            hintText: 'Your hobby',
-          ),
         ],
       ),
     );
@@ -73,8 +61,7 @@ class SignUpPage extends StatelessWidget {
     return BlocConsumer<AuthCubit, AuthState>(
       listener: (context, state) {
         if (state is AuthSuccess) {
-          Navigator.pushNamedAndRemoveUntil(
-              context, '/bonus', (route) => false);
+          Navigator.pushNamedAndRemoveUntil(context, '/main', (route) => false);
         } else if (state is AuthFailed) {
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             content: Text(state.error),
@@ -88,24 +75,22 @@ class SignUpPage extends StatelessWidget {
           );
         }
         return CustomButton(
-            title: 'Get Started',
+            title: 'Sign In',
             width: 220,
             onPressed: () {
-              context.read<AuthCubit>().signUp(
+              context.read<AuthCubit>().signIn(
                     email: emailController.text,
                     password: passwordController.text,
-                    name: nameController.text,
-                    hobby: hobbyController.text,
                   );
             });
       },
     );
   }
 
-  Widget signInButton(BuildContext context) {
+  Widget tacButton(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, '/sign-in');
+        Navigator.pop(context);
       },
       child: Container(
           alignment: Alignment.center,
@@ -114,7 +99,7 @@ class SignUpPage extends StatelessWidget {
             bottom: 73,
           ),
           child: Text(
-            'Have an account? Sign in',
+            'Dont Have an account? Sign up',
             style: greyTextStyle.copyWith(
               fontSize: 16,
               fontWeight: light,
@@ -137,7 +122,7 @@ class SignUpPage extends StatelessWidget {
           title(),
           inputSection(),
           submitButton(),
-          signInButton(context),
+          tacButton(context),
         ],
       )),
     );

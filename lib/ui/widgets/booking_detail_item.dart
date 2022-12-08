@@ -14,7 +14,7 @@ class BookingDetailItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         top: 16,
       ),
       child: Row(
@@ -22,10 +22,10 @@ class BookingDetailItem extends StatelessWidget {
           Container(
             width: 16,
             height: 16,
-            margin: EdgeInsets.only(
+            margin: const EdgeInsets.only(
               right: 6,
             ),
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(
               'assets/icon_check.png',
@@ -35,7 +35,7 @@ class BookingDetailItem extends StatelessWidget {
             title,
             style: blackTextStyle,
           ),
-          Spacer(),
+          const Spacer(),
           Text(
             valueText,
             style: blackTextStyle.copyWith(

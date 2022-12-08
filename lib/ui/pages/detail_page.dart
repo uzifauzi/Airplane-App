@@ -16,7 +16,7 @@ class DetailPage extends StatelessWidget {
       return Container(
         width: double.infinity,
         height: 450,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage(
@@ -29,7 +29,7 @@ class DetailPage extends StatelessWidget {
       return Container(
         height: 214,
         width: double.infinity,
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 236,
         ),
         decoration: BoxDecoration(
@@ -54,7 +54,7 @@ class DetailPage extends StatelessWidget {
           children: [
             //NOTE: INI TITLE
             Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 316,
               ),
               child: Row(
@@ -85,8 +85,8 @@ class DetailPage extends StatelessWidget {
                       Container(
                         width: 20,
                         height: 20,
-                        margin: EdgeInsets.only(right: 2),
-                        decoration: BoxDecoration(
+                        margin: const EdgeInsets.only(right: 2),
+                        decoration: const BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(
                               'assets/star.png',
@@ -107,10 +107,10 @@ class DetailPage extends StatelessWidget {
             // NOTE: INI DESCRIPTION(ABOUT)
             Container(
               width: double.infinity,
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 30,
               ),
-              padding: EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                 vertical: 30,
                 horizontal: 20,
               ),
@@ -130,7 +130,7 @@ class DetailPage extends StatelessWidget {
                       fontWeight: semiBold,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 6,
                   ),
                   Text(
@@ -139,7 +139,7 @@ class DetailPage extends StatelessWidget {
                       height: 2,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
 
@@ -151,21 +151,21 @@ class DetailPage extends StatelessWidget {
                       fontWeight: semiBold,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 6,
                   ),
                   Row(
                     children: [
-                      PhotoItem(
+                      const PhotoItem(
                         imageUrl: 'assets/image_photo1.jpg',
                       ),
-                      PhotoItem(
+                      const PhotoItem(
                         imageUrl: 'assets/image_photo2.jpg',
                       ),
                     ],
                   ),
                   //INI INTEREST
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Text(
@@ -175,28 +175,28 @@ class DetailPage extends StatelessWidget {
                       fontWeight: semiBold,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 6,
                   ),
                   Row(
                     children: [
-                      InterestItem(
+                      const InterestItem(
                         text: 'Kids Park',
                       ),
-                      InterestItem(
+                      const InterestItem(
                         text: 'Honor Bridge',
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
                     children: [
-                      InterestItem(
+                      const InterestItem(
                         text: 'City Musem',
                       ),
-                      InterestItem(
+                      const InterestItem(
                         text: 'Central Mall',
                       ),
                     ],
@@ -207,7 +207,7 @@ class DetailPage extends StatelessWidget {
 
             // NOTE: INI PRICE & BOOK BUTTON
             Container(
-              margin: EdgeInsets.symmetric(
+              margin: const EdgeInsets.symmetric(
                 vertical: 30,
               ),
               width: double.infinity,
@@ -225,7 +225,7 @@ class DetailPage extends StatelessWidget {
                             fontWeight: medium,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         Text(
@@ -244,7 +244,7 @@ class DetailPage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => ChooseSeatPage(),
+                            builder: (context) => const ChooseSeatPage(),
                           ));
                     },
                     width: 170,

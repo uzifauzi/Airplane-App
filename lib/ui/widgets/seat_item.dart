@@ -41,7 +41,7 @@ class SeatItem extends StatelessWidget {
     child() {
       switch (status) {
         case 0:
-          return SizedBox();
+          return const SizedBox();
         case 1:
           return Center(
               child: Text(
@@ -51,9 +51,9 @@ class SeatItem extends StatelessWidget {
             ),
           ));
         case 2:
-          return SizedBox();
+          return const SizedBox();
         default:
-          return SizedBox();
+          return const SizedBox();
       }
     }
 

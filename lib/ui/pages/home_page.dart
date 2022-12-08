@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
                             overflow: TextOverflow.ellipsis,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 6,
                         ),
                         Text(
@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
                   Container(
                     width: 60,
                     height: 60,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
                         image: AssetImage(
@@ -63,7 +63,7 @@ class HomePage extends StatelessWidget {
               ),
             );
           } else {
-            return SizedBox();
+            return const SizedBox();
           }
         },
       );
@@ -71,32 +71,32 @@ class HomePage extends StatelessWidget {
 
     Widget popularDestination() {
       return Container(
-        margin: EdgeInsetsDirectional.only(
+        margin: const EdgeInsetsDirectional.only(
           top: 30,
         ),
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              DestinationCard(
+              const DestinationCard(
                 nameplace: 'Singapore',
                 country: 'Singapore',
                 imageUrl: 'assets/image_destination1.jpg',
                 rating: 4.8,
               ),
-              DestinationCard(
+              const DestinationCard(
                 nameplace: 'Penang',
                 country: 'Malaysia',
                 imageUrl: 'assets/image_destination2.jpg',
                 rating: 4.7,
               ),
-              DestinationCard(
+              const DestinationCard(
                 nameplace: 'Jakarta',
                 country: 'Indonesia',
                 imageUrl: 'assets/image_destination3.jpg',
                 rating: 4.7,
               ),
-              DestinationCard(
+              const DestinationCard(
                 nameplace: 'Grand Place',
                 country: 'Thailand',
                 imageUrl: 'assets/image_destination4.jpg',
@@ -126,19 +126,19 @@ class HomePage extends StatelessWidget {
                 fontWeight: semiBold,
               ),
             ),
-            DestinationTile(
+            const DestinationTile(
               nameplace: 'Singapore',
               country: 'Singapore',
               imageUrl: 'assets/image_destination1.jpg',
               rating: 4.8,
             ),
-            DestinationTile(
+            const DestinationTile(
               nameplace: 'Roma',
               country: 'Italy',
               imageUrl: 'assets/image_destination5.jpg',
               rating: 4.9,
             ),
-            DestinationTile(
+            const DestinationTile(
               nameplace: 'Golden Bridge',
               country: 'Vietnam',
               imageUrl: 'assets/image_destination6.jpg',

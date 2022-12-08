@@ -14,15 +14,15 @@ class MainPage extends StatelessWidget {
   Widget BuildContent(int currentIndex) {
     switch (currentIndex) {
       case 0:
-        return HomePage();
+        return const HomePage();
       case 1:
-        return TransactionPage();
+        return const TransactionPage();
       case 2:
-        return WalletPage();
+        return const WalletPage();
       case 3:
-        return SettingPage();
+        return const SettingPage();
       default:
-        return HomePage();
+        return const HomePage();
     }
   }
 
@@ -47,19 +47,19 @@ class MainPage extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            CustomNavigationItem(
+            const CustomNavigationItem(
               index: 0,
               icon: 'assets/icon_home.png',
             ),
-            CustomNavigationItem(
+            const CustomNavigationItem(
               index: 1,
               icon: 'assets/icon_transaction.png',
             ),
-            CustomNavigationItem(
+            const CustomNavigationItem(
               index: 2,
               icon: 'assets/icon_card.png',
             ),
-            CustomNavigationItem(
+            const CustomNavigationItem(
               index: 3,
               icon: 'assets/icon_setting.png',
             ),

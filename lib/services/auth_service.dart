@@ -36,6 +36,26 @@ class AuthService {
     }
   }
 
+  // fungsi untuk login
+  Future<UserModel> signIn(
+      {required String email, required String password}) async {
+    try {
+      // UserCredential:  Struktur yang berisi Pengguna , Tipe Operasi , dan ID penyedia. Disini panggil fungsi sign in with email dan password
+      UserCredential userCredential = await _auth.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+
+      // ambil data user berdasarkan id
+      UserModel user =
+          await UserService().getUserById(userCredential.user!.uid);
+
+      return user;
+    } catch (e) {
+      throw e;
+    }
+  }
+
   // fungsi untuk log out akun
   Future<void> signOut() async {
     try {

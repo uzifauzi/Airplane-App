@@ -21,14 +21,14 @@ class DestinationCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => DetailPage(),
+            builder: (context) => const DetailPage(),
           ),
         );
       }),
       child: Container(
         width: 200,
         height: 323,
-        padding: EdgeInsets.all(
+        padding: const EdgeInsets.all(
           10,
         ),
         margin: EdgeInsets.only(
@@ -46,7 +46,7 @@ class DestinationCard extends StatelessWidget {
             Container(
               width: 180,
               height: 220,
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 bottom: 20,
               ),
               decoration: BoxDecoration(
@@ -64,7 +64,7 @@ class DestinationCard extends StatelessWidget {
                   height: 30,
                   decoration: BoxDecoration(
                     color: kWhiteColor,
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(18),
                     ),
                   ),
@@ -75,10 +75,10 @@ class DestinationCard extends StatelessWidget {
                       Container(
                         width: 20,
                         height: 20,
-                        margin: EdgeInsets.only(
+                        margin: const EdgeInsets.only(
                           right: 2,
                         ),
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage(
                             'assets/star.png',
@@ -97,7 +97,7 @@ class DestinationCard extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 left: 10,
               ),
               child: Column(
@@ -110,7 +110,7 @@ class DestinationCard extends StatelessWidget {
                       fontWeight: medium,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   Text(

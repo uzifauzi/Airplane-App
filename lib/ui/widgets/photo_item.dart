@@ -9,6 +9,7 @@ class PhotoItem extends StatelessWidget {
     return Container(
       width: 70,
       height: 70,
+      // ignore: prefer_const_constructors
       margin: EdgeInsets.only(
         right: 16,
       ),

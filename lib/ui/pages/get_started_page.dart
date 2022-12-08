@@ -13,7 +13,7 @@ class GetStartedPage extends StatelessWidget {
           Container(
             width: double.infinity,
             height: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(
@@ -31,7 +31,7 @@ class GetStartedPage extends StatelessWidget {
                     fontWeight: bold,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text(
@@ -42,7 +42,7 @@ class GetStartedPage extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 CustomButton(
@@ -55,7 +55,7 @@ class GetStartedPage extends StatelessWidget {
                     );
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 80,
                 ),
               ],

@@ -22,15 +22,15 @@ class DestinationTile extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => DetailPage(),
+            builder: (context) => const DetailPage(),
           ),
         );
       }),
       child: Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 16,
         ),
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           color: kWhiteColor,
           borderRadius: BorderRadius.circular(
@@ -42,7 +42,7 @@ class DestinationTile extends StatelessWidget {
             Container(
               width: 70,
               height: 70,
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 right: 16,
               ),
               decoration: BoxDecoration(
@@ -62,7 +62,7 @@ class DestinationTile extends StatelessWidget {
                     style: blackTextStyle.copyWith(
                         fontSize: 18, fontWeight: medium),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   Text(
@@ -81,10 +81,10 @@ class DestinationTile extends StatelessWidget {
                 Container(
                   width: 20,
                   height: 20,
-                  margin: EdgeInsets.only(
+                  margin: const EdgeInsets.only(
                     right: 2,
                   ),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage(
                       'assets/star.png',

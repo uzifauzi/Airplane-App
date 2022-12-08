@@ -11,7 +11,7 @@ class ChooseSeatPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget title() {
       return Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 50,
         ),
         child: Text(
@@ -26,7 +26,7 @@ class ChooseSeatPage extends StatelessWidget {
 
     Widget seatStatus() {
       return Container(
-          margin: EdgeInsets.only(
+          margin: const EdgeInsets.only(
             top: 30,
           ),
           child: Row(
@@ -35,10 +35,10 @@ class ChooseSeatPage extends StatelessWidget {
               Container(
                 width: 16,
                 height: 16,
-                margin: EdgeInsets.only(
+                margin: const EdgeInsets.only(
                   right: 6,
                 ),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage('assets/icon_available.png'))),
               ),
@@ -50,11 +50,11 @@ class ChooseSeatPage extends StatelessWidget {
               Container(
                 width: 16,
                 height: 16,
-                margin: EdgeInsets.only(
+                margin: const EdgeInsets.only(
                   left: 10,
                   right: 6,
                 ),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage('assets/icon_selected.png'))),
               ),
@@ -66,11 +66,11 @@ class ChooseSeatPage extends StatelessWidget {
               Container(
                 width: 16,
                 height: 16,
-                margin: EdgeInsets.only(
+                margin: const EdgeInsets.only(
                   left: 10,
                   right: 6,
                 ),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage('assets/icon_unavailable.png'))),
               ),
@@ -85,10 +85,10 @@ class ChooseSeatPage extends StatelessWidget {
     Widget selectSeat() {
       return Container(
         width: double.infinity,
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 30,
         ),
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 22,
           vertical: 30,
         ),
@@ -169,16 +169,16 @@ class ChooseSeatPage extends StatelessWidget {
 
             // INI SEAT 1
             Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 16,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  SeatItem(
+                  const SeatItem(
                     status: 2,
                   ),
-                  SeatItem(
+                  const SeatItem(
                     status: 2,
                   ),
                   Container(
@@ -192,10 +192,10 @@ class ChooseSeatPage extends StatelessWidget {
                       ),
                     )),
                   ),
-                  SeatItem(
+                  const SeatItem(
                     status: 0,
                   ),
-                  SeatItem(
+                  const SeatItem(
                     status: 2,
                   ),
                 ],
@@ -204,16 +204,16 @@ class ChooseSeatPage extends StatelessWidget {
 
             // INI SEAT 2
             Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 16,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  SeatItem(
+                  const SeatItem(
                     status: 0,
                   ),
-                  SeatItem(
+                  const SeatItem(
                     status: 0,
                   ),
                   Container(
@@ -227,10 +227,10 @@ class ChooseSeatPage extends StatelessWidget {
                       ),
                     )),
                   ),
-                  SeatItem(
+                  const SeatItem(
                     status: 0,
                   ),
-                  SeatItem(
+                  const SeatItem(
                     status: 2,
                   ),
                 ],
@@ -239,16 +239,16 @@ class ChooseSeatPage extends StatelessWidget {
 
             // INI SEAT 3
             Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 16,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  SeatItem(
+                  const SeatItem(
                     status: 1,
                   ),
-                  SeatItem(
+                  const SeatItem(
                     status: 1,
                   ),
                   Container(
@@ -262,10 +262,10 @@ class ChooseSeatPage extends StatelessWidget {
                       ),
                     )),
                   ),
-                  SeatItem(
+                  const SeatItem(
                     status: 0,
                   ),
-                  SeatItem(
+                  const SeatItem(
                     status: 0,
                   ),
                 ],
@@ -274,16 +274,16 @@ class ChooseSeatPage extends StatelessWidget {
 
             // INI SEAT 4
             Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 16,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  SeatItem(
+                  const SeatItem(
                     status: 0,
                   ),
-                  SeatItem(
+                  const SeatItem(
                     status: 2,
                   ),
                   Container(
@@ -297,10 +297,10 @@ class ChooseSeatPage extends StatelessWidget {
                       ),
                     )),
                   ),
-                  SeatItem(
+                  const SeatItem(
                     status: 0,
                   ),
-                  SeatItem(
+                  const SeatItem(
                     status: 0,
                   ),
                 ],
@@ -309,16 +309,16 @@ class ChooseSeatPage extends StatelessWidget {
 
             // INI SEAT 5
             Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 16,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  SeatItem(
+                  const SeatItem(
                     status: 0,
                   ),
-                  SeatItem(
+                  const SeatItem(
                     status: 0,
                   ),
                   Container(
@@ -332,10 +332,10 @@ class ChooseSeatPage extends StatelessWidget {
                       ),
                     )),
                   ),
-                  SeatItem(
+                  const SeatItem(
                     status: 2,
                   ),
-                  SeatItem(
+                  const SeatItem(
                     status: 0,
                   ),
                 ],
@@ -344,7 +344,7 @@ class ChooseSeatPage extends StatelessWidget {
 
             // NOTE: YOUR SEAT
             Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 30,
               ),
               child: Row(
@@ -369,7 +369,7 @@ class ChooseSeatPage extends StatelessWidget {
 
             // NOTE: TOTAL
             Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 16,
               ),
               child: Row(
@@ -398,7 +398,7 @@ class ChooseSeatPage extends StatelessWidget {
 
     Widget checkoutButton() {
       return Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 30,
           bottom: 46,
         ),
@@ -406,7 +406,7 @@ class ChooseSeatPage extends StatelessWidget {
           title: 'Continue to checkout',
           onPressed: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => CheckoutPage()));
+                MaterialPageRoute(builder: (context) => const CheckoutPage()));
           },
         ),
       );
