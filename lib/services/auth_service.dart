@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:airplane_app/cubit/auth_cubit.dart';
 import 'package:airplane_app/models/user_model.dart';
 import 'package:airplane_app/services/user_service.dart';
@@ -31,8 +33,17 @@ class AuthService {
       // set user
       await UserService().setUSer(user);
       return user;
-    } catch (e) {
-      throw e;
+    } on FirebaseAuthException catch (e) {
+      log(e.code);
+      if (e.code == "email-already-in-use") {
+        throw ('The account already exists for that email.');
+      } else if (e.code == "invalid-email") {
+        throw ('Check your email or password again.');
+      } else if (e.code == 'weak-password') {
+        throw ('The password provided is too weak.');
+      } else {
+        throw e;
+      }
     }
   }
 
@@ -51,8 +62,16 @@ class AuthService {
           await UserService().getUserById(userCredential.user!.uid);
 
       return user;
-    } catch (e) {
-      throw e;
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        throw 'User not found.';
+      } else if (e.code == 'user-disabled') {
+        throw 'email has been disabled.';
+      } else if (e.code == 'invalid-email') {
+        throw ('Email is invalid.');
+      } else {
+        throw e;
+      }
     }
   }
 

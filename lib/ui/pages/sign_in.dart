@@ -90,7 +90,7 @@ class SignInPage extends StatelessWidget {
   Widget tacButton(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pop(context);
+        Navigator.pushNamed(context, '/sign-up');
       },
       child: Container(
           alignment: Alignment.center,
