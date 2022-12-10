@@ -22,7 +22,7 @@ class CustomNavigationItem extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          SizedBox(),
+          const SizedBox(),
           Image.asset(
             icon,
             width: 24,

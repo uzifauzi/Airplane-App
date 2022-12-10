@@ -24,7 +24,7 @@ class SettingPage extends StatelessWidget {
       },
       builder: (context, state) {
         if (state is AuthLoading) {
-          return CircularProgressIndicator();
+          return const CircularProgressIndicator();
         }
         return CustomButton(
           title: 'Sign Out',

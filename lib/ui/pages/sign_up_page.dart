@@ -17,7 +17,7 @@ class SignUpPage extends StatelessWidget {
 
   Widget title() {
     return Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         top: 50.0,
       ),
       child: Text(
@@ -29,10 +29,10 @@ class SignUpPage extends StatelessWidget {
 
   Widget inputSection() {
     return Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         top: 30.0,
       ),
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         horizontal: 24,
         vertical: 30,
       ),
@@ -83,7 +83,7 @@ class SignUpPage extends StatelessWidget {
       },
       builder: (context, state) {
         if (state is AuthLoading) {
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         }
@@ -109,7 +109,7 @@ class SignUpPage extends StatelessWidget {
       },
       child: Container(
           alignment: Alignment.center,
-          margin: EdgeInsets.only(
+          margin: const EdgeInsets.only(
             top: 50,
             bottom: 73,
           ),

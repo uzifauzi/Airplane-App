@@ -9,7 +9,7 @@ class BonusPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget BonusCard() {
+    Widget bonusCard() {
       return BlocBuilder<AuthCubit, AuthState>(
         builder: (context, state) {
           if (state is AuthSuccess) {
@@ -109,7 +109,7 @@ class BonusPage extends StatelessWidget {
       );
     }
 
-    Widget Title() {
+    Widget title() {
       return Container(
         margin: const EdgeInsets.only(
           top: 80,
@@ -124,7 +124,7 @@ class BonusPage extends StatelessWidget {
       );
     }
 
-    Widget Subtitle() {
+    Widget subtitle() {
       return Container(
         margin: const EdgeInsets.only(
           top: 10,
@@ -156,9 +156,9 @@ class BonusPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            BonusCard(),
-            Title(),
-            Subtitle(),
+            bonusCard(),
+            title(),
+            subtitle(),
             startButton(),
           ],
         ),

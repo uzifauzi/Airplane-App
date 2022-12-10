@@ -16,8 +16,7 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
-    // TODO: implement initState
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       // ambil data user yg sekarang
       User? user = FirebaseAuth.instance.currentUser;
 
@@ -45,10 +44,10 @@ class _SplashPageState extends State<SplashPage> {
             Container(
               width: 100,
               height: 100,
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 bottom: 50,
               ),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(
                 'assets/icon_plane.png',

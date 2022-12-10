@@ -16,10 +16,10 @@ class SuccessCheckoutPage extends StatelessWidget {
           Container(
             width: 300,
             height: 150,
-            margin: EdgeInsets.only(
+            margin: const EdgeInsets.only(
               bottom: 80,
             ),
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(
               'assets/image_successed.png',
@@ -32,7 +32,7 @@ class SuccessCheckoutPage extends StatelessWidget {
               fontWeight: semiBold,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text(
@@ -44,7 +44,7 @@ class SuccessCheckoutPage extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 50,
               ),
               child: CustomButton(
