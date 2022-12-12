@@ -3,10 +3,13 @@ import 'package:flutter/material.dart';
 
 class SeatItem extends StatelessWidget {
   final int status;
+  // untuk kode kursi
+  final String id;
 
   const SeatItem({
     super.key,
     required this.status,
+    required this.id,
   });
 
   @override
