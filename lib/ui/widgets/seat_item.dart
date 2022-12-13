@@ -1,5 +1,7 @@
+import 'package:airplane_app/cubit/seat_cubit.dart';
 import 'package:airplane_app/shared/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SeatItem extends StatelessWidget {
   final int status;
@@ -60,19 +62,24 @@ class SeatItem extends StatelessWidget {
       }
     }
 
-    return Container(
-      width: 48,
-      height: 48,
-      decoration: BoxDecoration(
-          color: backgroundColor(),
-          border: Border.all(
-            color: borderColor(),
-            width: 2,
-          ),
-          borderRadius: BorderRadius.circular(
-            15,
-          )),
-      child: child(),
+    return GestureDetector(
+      onTap: () {
+        context.read<SeatCubit>().selectSeat(id);
+      },
+      child: Container(
+        width: 48,
+        height: 48,
+        decoration: BoxDecoration(
+            color: backgroundColor(),
+            border: Border.all(
+              color: borderColor(),
+              width: 2,
+            ),
+            borderRadius: BorderRadius.circular(
+              15,
+            )),
+        child: child(),
+      ),
     );
   }
 }
