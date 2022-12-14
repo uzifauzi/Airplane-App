@@ -1,70 +1,63 @@
 import 'package:airplane_app/cubit/seat_cubit.dart';
 import 'package:airplane_app/shared/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SeatItem extends StatelessWidget {
-  final int status;
   // untuk kode kursi
   final String id;
+  // untuk cek apakah seat available atau tidak
+  final bool isAvailable;
 
   const SeatItem({
     super.key,
-    required this.status,
     required this.id,
+    this.isAvailable = true,
   });
 
   @override
   Widget build(BuildContext context) {
+    bool isSelected = context.read<SeatCubit>().isSelected(id);
     backgroundColor() {
-      switch (status) {
-        case 0:
-          return kavailableColor;
-
-        case 1:
+      if (!isAvailable) {
+        return kunavailableColor;
+      } else {
+        if (isSelected) {
           return kPrimaryColor;
-        case 2:
+        } else {
           return kunavailableColor;
-        default:
-          return kavailableColor;
+        }
       }
     }
 
     borderColor() {
-      switch (status) {
-        case 0:
-          return kPrimaryColor;
-        case 1:
-          return kPrimaryColor;
-        case 2:
-          return kunavailableColor;
-        default:
-          return kunavailableColor;
+      if (!isAvailable) {
+        return kunavailableColor;
+      } else {
+        return kPrimaryColor;
       }
     }
 
     child() {
-      switch (status) {
-        case 0:
-          return const SizedBox();
-        case 1:
-          return Center(
-              child: Text(
-            'YOU',
-            style: whiteTextStyle.copyWith(
-              fontWeight: semiBold,
-            ),
-          ));
-        case 2:
-          return const SizedBox();
-        default:
-          return const SizedBox();
+      if (isSelected) {
+        return Center(
+            child: Text(
+          'YOU',
+          style: whiteTextStyle.copyWith(
+            fontWeight: semiBold,
+          ),
+        ));
+      } else {
+        return SizedBox();
       }
     }
 
     return GestureDetector(
       onTap: () {
-        context.read<SeatCubit>().selectSeat(id);
+        if (isAvailable) {
+          context.read<SeatCubit>().selectSeat(id);
+        }
       },
       child: Container(
         width: 48,
