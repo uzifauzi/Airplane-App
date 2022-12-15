@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
@@ -12,8 +14,8 @@ class SeatCubit extends Cubit<List<String>> {
     } else {
       state.remove(id);
     }
-    emit(state);
-    print('new state : $state');
+    log('new state : $state');
+    emit(List.from(state)); //membuat instance baru
   }
 
   //method untuk mengecek seat apakah sudah dipilih/belum
