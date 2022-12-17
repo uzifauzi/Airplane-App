@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/services.dart';
 
 class DestinationModel extends Equatable {
   // key yang dibutuhakn
@@ -27,6 +28,15 @@ class DestinationModel extends Equatable {
         rating: json['rating'].toDouble() ?? '',
         price: json['price'] ?? '',
       );
+
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'nameplace': nameplace,
+        'country': country,
+        'imageUrl': imageUrl,
+        'rating': rating,
+        'price': price
+      };
   @override
   List<Object?> get props => [id, nameplace, country, imageUrl, rating, price];
 }
