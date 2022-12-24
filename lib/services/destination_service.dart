@@ -3,13 +3,13 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class DestinationService {
   // tampung/ambil semua data bedasar referensi dari table destination
-  CollectionReference _collectionRef =
+  CollectionReference _collectionReference =
       FirebaseFirestore.instance.collection('destinations');
 
   Future<List<DestinationModel>> fetchDestinations() async {
     try {
       // var result berisi data yang diambil
-      QuerySnapshot result = await _collectionRef.get();
+      QuerySnapshot result = await _collectionReference.get();
 
       // var destinations diisi dari data result yang dikembalikan dlm bentuk list
       List<DestinationModel> destinations = result.docs.map((e) {
