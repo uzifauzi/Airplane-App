@@ -29,13 +29,13 @@ class TransactionModel extends Equatable {
         id: id,
         destination: DestinationModel.fromJson(
             json['destination']['id'], json['destination']),
-        mountOfTraveller: json['mounOfTraveller'],
+        mountOfTraveller: json['mountOfTraveller'],
         selectedSeats: json['selectedSeats'],
         insurance: json['insurance'],
         refundable: json['refundable'],
         vat: json['vat'],
         price: json['price'],
-        grandTotal: json['grandtotal'],
+        grandTotal: json['grandTotal'],
       );
 
   @override

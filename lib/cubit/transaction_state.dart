@@ -15,6 +15,9 @@ class TransactionSuccess extends TransactionState {
   List<TransactionModel> transactions;
 
   TransactionSuccess(this.transactions);
+  @override
+  // TODO: implement props
+  List<Object> get props => [transactions];
 }
 
 class TransactionFailed extends TransactionState {
